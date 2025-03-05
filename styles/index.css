@@ -107,21 +107,6 @@
         grid-template-rows: repeat(10, 56.8px);
     }
 
-    .nav-list::before {
-        content: attr(data-mobile);
-        /* Replace content with mobile version */
-    }
-
-    .nav-list {
-        display: none;
-        /* Hide the original text */
-    }
-
-    .nav-list::before {
-        display: inline;
-        /* display the mobile text */
-    }
-
     .title {
         font-size: 36px;
         letter-spacing: -0.800000011920929px;
@@ -155,19 +140,6 @@
         grid-template-columns: repeat(10, 76.8px);
         grid-template-rows: repeat(10, 102.4px);
     }
-
-    .nav-list::before {
-        content: attr(data-tablet);
-    }
-
-    .nav-list {
-        display: none;
-    }
-
-    .nav-list::before {
-        display: inline;
-    }
-
     .title {
         font-size: 72px;
         letter-spacing: -1.600000023841858px;
