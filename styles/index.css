@@ -1,8 +1,6 @@
 .grid-container {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(10, 144px);
-    grid-template-rows: repeat(10, 81px);
     gap: 1px;
     background-color: #5C7CFA;
     opacity: 30%;
@@ -22,7 +20,6 @@
 }
 
 .nav-bar {
-    width: 100%;
     display: inline-flex;
     flex-direction: row;
     align-items: baseline;
@@ -33,12 +30,10 @@
 }
 
 .logo {
-    width: 100%;
     background-color: #ffffff;
     color: #242635;
     vertical-align: text-top;
     font-size: 24px;
-    font-family: Aldrich;
     letter-spacing: -0.25px;
     line-height: 36px;
     border-style: hidden;
@@ -46,11 +41,11 @@
     list-style-type: none;
     background: transparent;
     justify-items: center;
-    border: solid 1px black;
+    /* border: solid 1px black; */
+
 }
 
 .menu {
-    width: 100%;
     color: #242635;
     text-align: left;
     vertical-align: text-top;
@@ -62,37 +57,11 @@
     display: inline-flex;
     flex-direction: row;
     list-style-type: none;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: transparent;
-    border: solid 1px black;
+    /* border: solid 1px black; */
 }
-
-.title {
-    color: #242635;
-    text-align: left;
-    vertical-align: text-top;
-    font-size: 90px;
-    font-family: Poppins;
-    letter-spacing: -2px;
-    line-height: 102px;
-    border-style: hidden;
-    outline: none;
-    width: 455px;
-}
-
-.content {
-    color: #242635;
-    text-align: center;
-    vertical-align: text-top;
-    font-size: 22px;
-    font-family: Source Sans Pro;
-    line-height: 33px;
-    border-style: hidden;
-    outline: none;
-    width: 573.5px;
-}
-
 
 .image-container {
     display: flex;
@@ -101,11 +70,169 @@
 }
 
 .content-container {
-    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.title {
+    color: #242635;
+    text-align: left;
+    vertical-align: text-top;
+    font-family: Poppins;
+    border-style: hidden;
+    outline: none;
+
+}
+
+.content {
+    color: #242635;
+    text-align: center;
+    vertical-align: text-top;
+    font-family: Source Sans Pro;
+    border-style: hidden;
+    outline: none;
+}
+
+@media screen and (max-width: 320px) {
+    .logo {
+        font-family: Baloo;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(10, 32px);
+        grid-template-rows: repeat(10, 56.8px);
+    }
+
+    .nav-list::before {
+        content: attr(data-mobile);
+        /* Replace content with mobile version */
+    }
+
+    .nav-list {
+        display: none;
+        /* Hide the original text */
+    }
+
+    .nav-list::before {
+        display: inline;
+        /* display the mobile text */
+    }
+
+    .title {
+        font-size: 36px;
+        letter-spacing: -0.800000011920929px;
+        line-height: 39.599998474121094px;
+        width: 182px;
+        margin-top: 30px;
+    }
+
+    .content {
+        font-size: 12px;
+        line-height: 18px;
+        width: 217px;
+        margin-top: 30px;
+    }
+
+    .image {
+        margin-top: 50px;
+        margin-left: 10px;
+        width: 265px;
+        height: 284px;
+        content: url("../images/horses-mobile.png");
+    }
+}
+
+@media screen and (min-width: 321px)and (max-width: 768px) {
+    .logo {
+        font-family: Baloo;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(10, 76.8px);
+        grid-template-rows: repeat(10, 102.4px);
+    }
+
+    .nav-list::before {
+        content: attr(data-tablet);
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav-list::before {
+        display: inline;
+    }
+
+    .title {
+        font-size: 72px;
+        letter-spacing: -1.600000023841858px;
+        line-height: 82.80000305175781px;
+        width: 364px;
+        margin-top: 215px;
+    }
+
+    .content {
+        font-size: 22px;
+        line-height: 33px;
+        width: 573.5px;
+        margin-top: 25px;
+    }
+
+    .image {
+        margin-top: 43px;
+        margin-left: 20px;
+        width: 625px;
+        content: url("../images/horses-tablet.jpg");
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .nav-bar {
+        margin-top: 38px;
+        margin-left: -30px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .logo {
+        font-family: Aldrich;
+        margin-left: -18px;
+    }
+
+    .menu {
+        width: 13%;
+        margin-left: -75px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(10, 144px);
+        grid-template-rows: repeat(10, 81px);
+    }
+
+    .title {
+        font-size: 90px;
+        letter-spacing: -2px;
+        line-height: 102px;
+        width: 455px;
+        margin-top: 120px;
+    }
+
+    .content {
+        font-size: 22px;
+        line-height: 33px;
+        width: 573.5px;
+        margin-top: 30px;
+    }
+
+    .image {
+        content: url("../images/horses-desktop.jpg");
+        margin-top: 50px;
+        margin-left: 36px;
+        width: 870px;
+    }
 }
