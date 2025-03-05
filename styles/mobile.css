@@ -127,22 +127,26 @@
         letter-spacing: -0.800000011920929px;
         line-height: 39.599998474121094px;
         width: 182px;
+        margin-top: 30px;
     }
 
     .content {
         font-size: 12px;
         line-height: 18px;
         width: 217px;
+        margin-top: 30px;
     }
 
     .image {
+        margin-top: 50px;
+        margin-left: 10px;
+        width: 265px;
+        height: 284px;
         content: url("../images/horses-mobile.png");
     }
-
-    .content-container {}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 321px)and (max-width: 768px) {
     .logo {
         font-family: Baloo;
     }
@@ -154,17 +158,14 @@
 
     .nav-list::before {
         content: attr(data-tablet);
-        /* Replace content with mobile version */
     }
 
     .nav-list {
         display: none;
-        /* Hide the original text */
     }
 
     .nav-list::before {
         display: inline;
-        /* display the mobile text */
     }
 
     .title {
