@@ -107,6 +107,21 @@
         grid-template-rows: repeat(10, 56.8px);
     }
 
+    .nav-list::before {
+        content: attr(data-mobile);
+        /* Replace content with mobile version */
+    }
+
+    .nav-list {
+        display: none;
+        /* Hide the original text */
+    }
+
+    .nav-list::before {
+        display: inline;
+        /* display the mobile text */
+    }
+
     .title {
         font-size: 36px;
         letter-spacing: -0.800000011920929px;
@@ -137,20 +152,40 @@
         grid-template-rows: repeat(10, 102.4px);
     }
 
+    .nav-list::before {
+        content: attr(data-tablet);
+        /* Replace content with mobile version */
+    }
+
+    .nav-list {
+        display: none;
+        /* Hide the original text */
+    }
+
+    .nav-list::before {
+        display: inline;
+        /* display the mobile text */
+    }
+
     .title {
         font-size: 72px;
         letter-spacing: -1.600000023841858px;
         line-height: 82.80000305175781px;
         width: 364px;
+        margin-top: 215px;
     }
 
     .content {
         font-size: 22px;
         line-height: 33px;
         width: 573.5px;
+        margin-top: 25px;
     }
 
     .image {
+        margin-top: 43px;
+        margin-left: 20px;
+        width: 625px;
         content: url("../images/horses-tablet.jpg");
     }
 }
